@@ -2,11 +2,12 @@ import styled from "styled-components";
 
 export const MovieWrapper = styled.div`
   margin: 60px;
+  text-align: center;
 `;
 
 export const Header = styled.h1`
   text-align: center;
-  color: blue;
+  color: black;
 `;
 
 export const PosterWrap = styled.div`
@@ -14,6 +15,7 @@ export const PosterWrap = styled.div`
   align-items: center;
   justify-content: center;
   display: flex;
+  width: 500;
 `;
 
 export const Poster = styled.img`
