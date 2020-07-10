@@ -44,13 +44,13 @@ export const MovieDetaileStyle = styled.div`
   color: #d00000;
   text-align: center;
   background: #03071e;
-  font-size: 24px;
+  font-size: 15px;
   width: 900px;
   height: 200px;
 
   img {
-    width: 300px;
-    height: 370px;
+    width: 200px;
+    height: 270px;
   }
 
   h1 {
@@ -61,4 +61,38 @@ export const MovieDetaileStyle = styled.div`
     padding-top: 20px;
     font-size: 30px;
   }
+`;
+export const RecomendedMovie = styled.div`
+  border: solid 10px black;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 450px;
+  width: 800px;
+  height: 400px;
+
+  display: auto;
+
+  img {
+    width: 100px;
+    height: 170px;
+    margin-top: 150px;
+    margin-right: 50%;
+    margin-left: 50%;
+    float: left;
+  }
+
+  h4 {
+    color: #d00000;
+    text-align: center;
+
+    font-size: 15px;
+    margin-top: 70px;
+    margin-right: 50px;
+  }
+`;
+
+export const RecoTitle = styled.h3`
+  color: blue;
+  text-align: center;
+  font-size: 20px;
 `;
