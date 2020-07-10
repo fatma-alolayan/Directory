@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams, Redirect } from "react-router-dom";
-import { Poster, PosterWrap, MovieWrapper, Title } from "../styles";
+import { Poster, MovieWrapper, MovieDetaileStyle } from "../styles";
 
 const MovieDetail = ({ movies }) => {
   const { movieId } = useParams();
@@ -8,14 +8,16 @@ const MovieDetail = ({ movies }) => {
   if (!movie) return <Redirect to="/" />;
 
   return (
-    <MovieWrapper>
-      <Title>{movie.title}</Title>
-      <Poster src={movie.poster} alt="poster name" />
-      <p>{movie.released}</p>
-      <p>{movie.runtime}</p>
-      <p>{movie.genre}</p>
-      <p>{movie.plot}</p>
-    </MovieWrapper>
+    <MovieDetaileStyle>
+      <MovieWrapper>
+        <h1>{movie.title}</h1>
+        <Poster src={movie.poster} alt="poster name" />
+        <p>{movie.released}</p>
+        <p>{movie.runtime}</p>
+        <p>{movie.genre}</p>
+        <p>{movie.plot}</p>
+      </MovieWrapper>
+    </MovieDetaileStyle>
   );
 };
 

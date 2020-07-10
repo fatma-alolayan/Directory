@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Title, Poster, PosterWrap, MovieWrapper } from "../styles";
+import { Poster, MovieWrapper, MovieTitle } from "../styles";
 
 const MovieItem = ({ movie }) => {
   return (
     <MovieWrapper>
-      <Title>{movie.title}</Title>
+      <MovieTitle>{movie.title}</MovieTitle>
       <Link to={`/${movie.id}`}>
         <Poster src={movie.poster} alt="poster name" />
       </Link>
