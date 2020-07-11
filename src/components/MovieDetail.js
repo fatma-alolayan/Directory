@@ -1,12 +1,13 @@
 import React from "react";
-import { useParams, Redirect } from "react-router-dom";
-//import RecomendedMovie from "./RecomendedMovie";
+import { useParams, Redirect, Link } from "react-router-dom";
+
 import {
   Poster,
   MovieWrapper,
   MovieDetaileStyle,
   RecomendedMovie,
   RecoTitle,
+  BackList,
 } from "../styles";
 
 const MovieDetail = ({ movies }) => {
@@ -16,6 +17,9 @@ const MovieDetail = ({ movies }) => {
 
   return (
     <>
+      <Link to="/">
+        <BackList>Movie List</BackList>
+      </Link>
       <MovieDetaileStyle>
         <MovieWrapper>
           <h1>{movie.title}</h1>
@@ -29,11 +33,12 @@ const MovieDetail = ({ movies }) => {
 
       <RecomendedMovie>
         <RecoTitle>Recommended Movies</RecoTitle>
-        <img src={movies[0].poster} alt="poster name" />
-        <h4>{movies[0].title}</h4>
-
-        <img src={movies[3].poster} alt="poster name" />
-        <h4>{movies[3].title}</h4>
+        <Link to={`/${movies[0].id}`}>
+          <img src={movies[0].poster} alt="poster name" />
+        </Link>
+        <Link to={`/${movies[3].id}`}>
+          <img src={movies[3].poster} alt="poster name" />
+        </Link>
       </RecomendedMovie>
     </>
   );

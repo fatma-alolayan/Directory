@@ -4,13 +4,16 @@ import { Header } from "./styles";
 import MovieDetail from "./components/MovieDetail";
 import { Route, Switch } from "react-router";
 import movies from "./movies";
+//styles
+import { GlobalStyle } from "./styles";
 
 function App() {
   const [_movie, setMovie] = useState(movies);
 
   return (
     <div>
-      <Header>Movie List</Header>;
+      <GlobalStyle />
+
       <Switch>
         <Route path="/:movieId">
           <MovieDetail movies={_movie} />

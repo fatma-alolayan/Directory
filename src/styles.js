@@ -1,14 +1,23 @@
-import styled from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
+
+export const GlobalStyle = createGlobalStyle`
+  body {
+  
+    background-color: black;
+  }
+`;
 
 export const Header = styled.h1`
   text-align: center;
-  color: black;
+  color: white;
   font-family: cursive;
   font-size: 70px;
 `;
 
 export const MovieWrapper = styled.div`
   text-align: center;
+  border: solid 10px white;
+  padding-bottom: 10px;
 `;
 
 export const Poster = styled.img`
@@ -22,7 +31,7 @@ export const Poster = styled.img`
 export const MovieTitle = styled.h2`
   color: #d00000;
   text-align: center;
-  background: #03071e;
+  // background: #03071e;
   height: 60px;
   padding-top: 20px;
   font-size: 24px;
@@ -41,12 +50,13 @@ export const Grid = styled.div`
 export const MovieDetaileStyle = styled.div`
   margin-left: auto;
   margin-right: auto;
-  color: #d00000;
+  color: white;
   text-align: center;
   background: #03071e;
   font-size: 15px;
   width: 900px;
   height: 200px;
+  padding-bottom: 80px;
 
   img {
     width: 200px;
@@ -63,36 +73,43 @@ export const MovieDetaileStyle = styled.div`
   }
 `;
 export const RecomendedMovie = styled.div`
-  border: solid 10px black;
+  border: solid 10px white;
+  background: #03071e;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 450px;
-  width: 800px;
-  height: 400px;
-
-  display: auto;
+  margin-top: 320px;
+  width: 600px;
+  height: 250px;
+  display: grid;
+  grid-template-columns: 100px 200px 200px 200px;
 
   img {
-    width: 100px;
-    height: 170px;
-    margin-top: 150px;
+    display: block;
+    margin-top: 50px;
     margin-right: 50%;
     margin-left: 50%;
-    float: left;
+    width: 100px;
+    height: 170px;
   }
 
   h4 {
     color: #d00000;
-    text-align: center;
-
     font-size: 15px;
-    margin-top: 70px;
-    margin-right: 50px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
   }
 `;
 
 export const RecoTitle = styled.h3`
-  color: blue;
+  color: white;
   text-align: center;
-  font-size: 20px;
+  font-size: 30px;
+  font-family: cursive;
+  margin-top: 5px;
+  margin-left: 15px;
+`;
+export const BackList = styled.h2`
+  color: white;
+  margin: 20px;
 `;
